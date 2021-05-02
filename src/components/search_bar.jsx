@@ -2,8 +2,10 @@ import React, { Component } from "react";
 
 class SearchBar extends Component {
   handleUpdate = (event) => {
-    console.log(event.target.value);
+    // eslint-disable-next-line react/destructuring-assignment
+    this.props.searchFunction(event.target.value);
   };
+
   render() {
     return (
       <input
